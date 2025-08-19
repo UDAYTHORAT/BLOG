@@ -1,0 +1,251 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f9fafb;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header Name + Subtitle */
+header {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin: 0;
+  background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeSlideDown 1s ease forwards;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+
+/* Header */
+/* Contact Links */
+header .links {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* extra spacing between buttons */
+  margin-top: 20px;
+}
+
+header .links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Email Button */
+header .links a.email {
+  background: #f3f4f6; /* light gray */
+  color: #111;
+}
+header .links a.email:hover {
+  background: #e5e7eb;
+  transform: scale(1.05);
+}
+
+/* Call Button */
+header .links a.call {
+  background: #f3f4f6;
+  color: #111;
+}
+header .links a.call:hover {
+  background: #e5e7eb;
+  transform: scale(1.05);
+}
+
+/* GitHub Button (different color) */
+header .links a.github {
+  background: #24292e; /* GitHub dark */
+  color: #fff;
+}
+header .links a.github:hover {
+  background: #000;
+  transform: scale(1.05);
+}
+
+
+/* Sections */
+section {
+  margin: 40px auto;
+  padding: 20px;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+/* About */
+.about {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Skills */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.skill {
+  background: #fff;
+  text-align: center;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.2);
+  color: #6366f1;
+}
+
+/* Projects */
+.project {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.project:hover h3 {
+  color: #6366f1;
+}
+
+.project a {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+/* Publications */
+.publication {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Certifications */
+.certifications {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.certifications li {
+  margin: 8px 0;
+  transition: transform 0.3s ease;
+}
+
+.certifications li:hover {
+  transform: translateX(8px);
+  color: #6366f1;
+}
+
+/* Footer */
+footer {
+  background: #111827;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  animation: float 3s infinite ease-in-out;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Gradient Button (Shimmer Effect) */
+.btn-shimmer {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+  background-size: 200% auto;
+  animation: shimmer 2s linear infinite;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-shimmer:hover {
+  transform: scale(1.05);
+}
